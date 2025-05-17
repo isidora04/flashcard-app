@@ -1,6 +1,5 @@
-import { useNavigate, useParams } from 'react-router-dom';
 import styles from "./viewCard.module.css";
-import { Ellipsis, SquarePen, CheckIcon } from 'lucide-react';
+import { SquarePen, CheckIcon } from 'lucide-react';
 import { useState } from 'react';
 
 const ViewCard = ({ flashcard, index, setError, setId, onUpdate }) => {

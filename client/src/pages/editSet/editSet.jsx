@@ -36,7 +36,7 @@ const EditSet = () => {
         setError("");
         }
         loadInfo();
-    }, []);
+    }, [BACKEND_URL, setId, token]);
 
     // for editing set features (i.e. permissions or title)
     const handleEdit = async (e) => {

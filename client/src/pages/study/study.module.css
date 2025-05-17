@@ -74,6 +74,13 @@ progress {
 .cardText {
     font-weight: 600;
     font-size: large;
+    width: 80%;
+}
+
+.cardText h2 {
+    text-wrap: wrap;
+    word-wrap: break-word;
+    text-align: center;
 }
 
 .moveButtons {

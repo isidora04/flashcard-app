@@ -45,7 +45,7 @@ const Search = () => {
         setError("");
         }
         loadResults();
-    }, [searchParams, token]);
+    }, [searchParams, token, BACKEND_URL]);
 
     const updateParams = (key, value) => {
         const newParams = new URLSearchParams(searchParams);

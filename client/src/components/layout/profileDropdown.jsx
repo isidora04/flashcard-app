@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import { useAuth } from "../../contexts/authContext";
 import style from "./profileDropdown.module.css";
 import { useState } from "react";

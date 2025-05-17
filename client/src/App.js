@@ -10,17 +10,18 @@ import MySets from "./pages/mySets/mySets";
 import EditSet from "./pages/editSet/editSet";
 import ViewSet from "./pages/viewSet/viewSet";
 import Study from "./pages/study/study";
+import PrivateRoute from "./PrivateRoute";
 
 const MyRoutes = () => {
   return <Routes>
         <Route element={<Layout />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/create" element={<CreateSet />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/users/me/flashcards" element={<MySets />} />
-          <Route path="/flashcards/:setId/edit" element={<EditSet />} />
-          <Route path="/flashcards/:setId" element={<ViewSet />} />
-          <Route path="/flashcards/:setId/study" element={<Study />} />
+          <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route path="/create" element={<PrivateRoute><CreateSet /></PrivateRoute>} />
+          <Route path="/search" element={<PrivateRoute><Search /></PrivateRoute>} />
+          <Route path="/users/me/flashcards" element={<PrivateRoute><MySets /></PrivateRoute>} />
+          <Route path="/flashcards/:setId/edit" element={<PrivateRoute><EditSet /></PrivateRoute>} />
+          <Route path="/flashcards/:setId" element={<PrivateRoute><ViewSet /></PrivateRoute>} />
+          <Route path="/flashcards/:setId/study" element={<PrivateRoute><Study /></PrivateRoute>} />
           {/* <Route path="/profile" element={<Profile />} /> */}
         </Route>
         <Route path="/" element={<Navigate to="/login" replace />} />

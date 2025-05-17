@@ -8,7 +8,7 @@ const Home = () => {
 
     const { user } = useAuth();
     const navigate = useNavigate();
-    const [ error, setError ] = useState(null);
+    //const [ error, setError ] = useState(null);
     const [ searchInput, setSearchInput ] = useState("");
 
     const handleSearch = async (e) => {
