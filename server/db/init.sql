@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS Users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(20) UNIQUE NOT NULL,
+    email VARCHAR(252) UNIQUE NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    password_hash VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS FCSets (
+    set_id SERIAL PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    last_updated TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    permissions CHAR(3) NOT NULL,
+    num_cards INT NOT NULL DEFAULT 0,
+    owner_id INT NOT NULL,
+    FOREIGN KEY (owner_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS Flashcards (
+    flashcard_id SERIAL PRIMARY KEY,
+    term VARCHAR(2000) NOT NULL,
+    definition VARCHAR(2000) NOT NULL,
+    set_id INT NOT NULL,
+    FOREIGN KEY (set_id) REFERENCES FCSets(set_id) ON DELETE CASCADE
+);

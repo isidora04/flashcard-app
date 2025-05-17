@@ -1,0 +1,146 @@
+.cardContainer {
+    background-color: white;
+    border: 1.2px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.073);
+}
+
+.cardContainer:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.338);
+}
+
+.cardHeader h2 {
+    margin-top: 0;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightSide {
+    display: flex;
+    gap: 10px;
+}
+
+.rightSide p {
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 20px;
+    padding: 3px 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-height: fit-content;
+}
+
+.globe {
+    width: 15px;
+    height: 15px;
+    color: rgb(35, 35, 35);
+}
+
+.lock {
+    width: 15px;
+    height: 15px;
+    color: rgb(35, 35, 35);
+}
+
+
+.moreButton {
+    background-color: white;
+    border: 0px;
+    border-radius: 10px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.moreButton:hover {
+    cursor: pointer;
+    background-color: rgb(237, 237, 237);
+}
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.cardDates p {
+    color: rgb(109, 109, 109);
+    font-size: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.cardDates {
+    margin-bottom: 1rem;
+}
+
+.numCards {
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #9139a997;
+    background-color: #9139a924;
+    color: #9139A9;
+    border-radius: 20px;
+    padding: 3px 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.setButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.setButtons button {
+    border-radius: 5px;
+    max-height: fit-content;
+    min-height: fit-content;
+    width: 50%;
+    font-size: 1rem;
+    transition: background-color 0.15s ease-in-out;
+    padding: 0.5rem 0.8rem;
+}
+
+.studyButton {
+    background-color: #9139A9;
+    color: white;
+    border: 1px solid #9139a900;
+}
+
+.studyButton:hover {
+    cursor: pointer;
+    background-color: #69297a;
+}
+
+.cardTitle:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.editButton {
+    border: 1px solid #ababab;
+    background-color: white;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.editButton:hover {
+    cursor: pointer;
+    background-color: #dbdbdb;
+}
+
+.squarePen {
+    width: 15px;
+    height: 15px;
+}

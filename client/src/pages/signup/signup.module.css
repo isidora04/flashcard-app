@@ -1,0 +1,26 @@
+.formInput {
+    margin-bottom: 1rem;
+}
+
+.createText {
+    margin-bottom: 0;
+}
+
+.showButton {
+    background-color: white;
+    color: #9139A9;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 600;
+}
+
+.showButton:hover {
+    background-color: white;
+    color: #be5bd9;
+}
+
+.passwordLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

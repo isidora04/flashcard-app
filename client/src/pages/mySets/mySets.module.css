@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.mySetsContainer {
+    margin: 0;
+    background: linear-gradient(45deg, #feeaf2 0%, #f4eafd 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    background-attachment: fixed;
+}
+
+.mySetsHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 3rem;
+    align-items: center;
+}
+
+.mySetsHeader p {
+    color: rgb(87, 87, 87);
+    margin-top: 0;
+}
+
+.mySetsHeader h1 {
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.createButton {
+    border: 1px solid #9139a900;
+    border-radius: 5px;
+    max-height: 2.5rem;
+    min-height: fit-content;
+    background-color: #9139A9;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.15s ease-in-out;
+    padding: 0.8rem;
+}
+
+.createButton:hover {
+    cursor: pointer;
+    background-color: #69297a;
+}
+
+.searchInput {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 3rem;
+    padding-left: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(178, 178, 178);
+    font-size: 16px;
+}
+
+.searchInput:focus {
+    outline-color: #8d6498;
+    outline-offset: 3px;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.5rem;
+    color: rgb(126, 126, 126);
+}
+
+.searchBar {
+    position: relative;
+    margin: 1rem 2.8rem;
+    max-width: 30%;
+}
+
+.flashcardSets {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin: auto;
+}
+
+@media (min-width: 700px) {
+  .flashcardSets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 980px) {
+  .flashcardSets {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.resultsContainer {
+    margin: auto 2.8rem;
+    display: flex;    
+}
+
+.pageButtons {
+    margin: 2rem auto;
+    color: rgb(40, 40, 40);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.pageButtons > button {
+    background: white;
+    padding: 0.8rem;
+    max-height: fit-content;
+    border-radius: 7px;
+    color: rgb(40, 40, 40);
+    border: 1px solid rgb(196, 196, 196);
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.pageButtons > button:hover {
+    background-color: rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+.pageButtons > button:disabled {
+    background: transparent;
+    color: rgb(126, 126, 126);
+    border-color: rgb(215, 215, 215);
+}
+
+.pageButtons > button:disabled:hover {
+    cursor: default;
+}

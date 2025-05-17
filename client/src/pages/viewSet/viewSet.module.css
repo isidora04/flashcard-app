@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.viewContainer {
+    margin: 0;
+    background: linear-gradient(45deg, #feeaf2 0%, #f4eafd 100%);
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerRow, .setInfo {
+    display: flex;
+    width: 70%;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+.arrowLeft {
+    background: transparent;
+    border: 0px;
+    max-width: fit-content;
+    max-height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.arrowLeft:hover {
+    background-color: rgb(222, 222, 222);
+    cursor: pointer;
+}
+
+.setTitle {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.permissions {
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 20px;
+    padding: 3px 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-height: fit-content;
+    color: rgb(21, 21, 21);
+}
+
+.globe {
+    width: 15px;
+    height: 15px;
+    color: rgb(35, 35, 35);
+}
+
+.lock {
+    width: 15px;
+    height: 15px;
+    color: rgb(35, 35, 35);
+}
+
+.setInfo {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.setInfo > * {
+    margin: 0;
+}
+
+.userInfo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.username {
+    text-decoration: none;
+    color: rgb(69, 69, 69);
+    margin: 0;
+}
+
+.iconButton {
+    background-color: rgb(224, 224, 224);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 0px;
+    color: rgb(90, 90, 90);
+}
+
+
+.dates {
+    color: rgb(61, 61, 61);
+    font-size: 15px;
+}
+
+.detailsBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 1.5rem auto 1rem auto;
+}
+
+.flashcardsHeading {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.editButton, .deleteButton, .studyButton, .backButton {
+    border-radius: 5px;
+    max-height: fit-content;
+    min-height: fit-content;
+    max-width: fit-content;
+    font-size: 1rem;
+    transition: background-color 0.15s ease-in-out;
+    padding: 0.5rem 0.8rem;
+}
+
+.editButton, .studyButton {
+    background-color: #9139A9;
+    color: white;
+    border: 1px solid #9139a900;
+}
+
+.editButton:hover, .studyButton:hover {
+    cursor: pointer;
+    background-color: #69297a;
+}
+
+.deleteButton {
+    background-color: white;
+    border: 1px solid rgb(228, 228, 228);
+    color: red;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.backButton {
+    background-color: white;
+    border: 1px solid rgb(228, 228, 228);
+}
+
+.deleteButton:hover, .backButton:hover {
+    cursor: pointer;
+    background-color: rgb(237, 237, 237);
+}
+
+.ownerButtons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.trash {
+    width: 18px;
+    height: 18px;
+}
+
+.flashcardContainer {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardTable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewButtons {
+    display: flex;
+    justify-content: end;
+    width: 70%;
+    margin: 1rem 0.5rem 2rem 0.5rem;
+    gap: 10px;
+}
