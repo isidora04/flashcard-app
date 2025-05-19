@@ -1,6 +1,7 @@
 import styles from "./viewCard.module.css";
 import { SquarePen, CheckIcon } from 'lucide-react';
 import { useState } from 'react';
+import TextareaAutosize from "react-textarea-autosize"
 
 const ViewCard = ({ flashcard, index, setError, setId, onUpdate }) => {
 
@@ -42,13 +43,13 @@ const ViewCard = ({ flashcard, index, setError, setId, onUpdate }) => {
                 <div className={styles.cardInfo}>
                     <div className={styles.cardFront}>
                         {editMode ? 
-                        <textarea value={front} className={styles.editFront}
+                        <TextareaAutosize value={front} className={styles.editFront}
                             onChange={(e) => setFront(e.target.value)} />
                         : <p className={styles.cardTerm}>{flashcard.term}</p>}
                     </div>
                     <div className={styles.cardBack}>
                         {editMode ? 
-                        <textarea value={back} className={styles.editBack}
+                        <TextareaAutosize value={back} className={styles.editBack}
                             onChange={(e) => setBack(e.target.value)} />
                         : <p className={styles.cardTerm}>{flashcard.definition}</p>}
                     </div>

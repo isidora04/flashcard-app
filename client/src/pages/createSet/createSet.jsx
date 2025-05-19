@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Trash2 } from "lucide-react";
 import styles from "./createSet.module.css";
+import TextareaAutosize from "react-textarea-autosize"
+
 
 const CreateSet = () => {
 
@@ -127,16 +129,16 @@ const CreateSet = () => {
                             <div className={styles.cardContent}>
                                 <div className={styles.cardFront}>
                                 <label htmlFor="term">Front</label>
-                                <textarea type="text" id="term" className={styles.frontInput}
-                                    placeholder="Question or term" rows={5}
+                                <TextareaAutosize type="text" id="term" className={styles.frontInput}
+                                    placeholder="Question or term" minRows={5}
                                     value={card.term}
                                     onChange={(e) => handleFlashcardChange(index, "term", e.target.value)}
                                 />
                                 </div>
                                 <div className={styles.cardBack}>
                                 <label htmlFor="definition">Back</label>
-                                <textarea type="text" id="definition" className={styles.backInput}
-                                    placeholder="Answer or definition" rows={5}
+                                <TextareaAutosize type="text" id="definition" className={styles.backInput}
+                                    placeholder="Answer or definition" minRows={5}
                                     value={card.definition}
                                     onChange={(e) => handleFlashcardChange(index, "definition", e.target.value)}
                                 />

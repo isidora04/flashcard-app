@@ -36,7 +36,13 @@
     border-bottom: 1px solid rgb(182, 182, 182);
 }
 
-.logoutButton {
+@media (min-width: 501px) {
+    .dropdown .navButton {
+        display: none;
+    }
+}
+
+.logoutButton, .navButton {
     background-color: white;
     border: 0px;
     padding:  0  0.5rem 0.5rem 0.5rem;
@@ -48,7 +54,7 @@
     gap: 5px;
 }
 
-.logoutButton:hover {
+.logoutButton:hover, .navButton:hover {
     background-color: rgb(244, 244, 244);
     cursor: pointer;
 }

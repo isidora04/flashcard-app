@@ -8,6 +8,12 @@
     padding: 0.5rem;
 }
 
+@media (max-width: 500px) {
+  .navContainer ul li:not(:first-child) {
+    display: none;
+  }
+}
+
 .navContainer {
     font-family: 'Inter', sans-serif;
     height: 3.5rem;

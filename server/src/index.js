@@ -545,14 +545,10 @@ app.post("/flashcards/:setId", jwtAuth, ownerAuth, async (req, res) => {
             VALUES ($1, $2, $3) RETURNING *", [term, definition, setId]
         );
 
-        // update num_cards in the set
+        // update num_cards in the set and last updated
         await pool.query(
-            "UPDATE FCSets SET num_cards = num_cards + 1 WHERE set_id = $1", 
-            [setId]
-        );
-        // set last_updated
-        await pool.query(
-            "UPDATE FCSets SET last_updated = NOW() WHERE set_id = $1", 
+            "UPDATE FCSets SET num_cards = num_cards + 1, last_updated = NOW() \
+            WHERE set_id = $1", 
             [setId]
         );
 

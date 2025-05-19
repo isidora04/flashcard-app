@@ -69,7 +69,7 @@ textarea {
 }
 
 .editFront, .editBack {
-    height: 100%;
+    height: fit-content;
     width: 100%;
     padding: 0.5rem;
     font-family: 'Inter', sans-serif;
@@ -77,5 +77,5 @@ textarea {
     border-radius: 5px;
     border: 1px solid rgb(214, 214, 214);
     box-sizing: border-box;
-    resize: vertical;
+    resize: none;
 }

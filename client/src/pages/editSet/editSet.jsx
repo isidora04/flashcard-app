@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Trash2 } from "lucide-react";
 import styles from "../createSet/createSet.module.css";
+import TextareaAutosize from "react-textarea-autosize";
 
 const EditSet = () => {
 
@@ -145,8 +146,8 @@ const EditSet = () => {
     }
 
     const handleSaveAll = async (e) => {
-        await handleEdit(e);
         await editFlashcards(e);
+        await handleEdit(e);
     };
 
     return (<>
@@ -214,16 +215,16 @@ const EditSet = () => {
                             <div className={styles.cardContent}>
                                 <div className={styles.cardFront}>
                                 <label htmlFor="term">Front</label>
-                                <textarea id="term" className={styles.frontInput}
-                                    placeholder="Question or term" rows={5}
+                                <TextareaAutosize id="term" className={styles.frontInput}
+                                    placeholder="Question or term" minRows={5}
                                     value={card.term}
                                     onChange={(e) => handleFlashcardChange(index, "term", e.target.value)}
                                 />
                                 </div>
                                 <div className={styles.cardBack}>
                                 <label htmlFor="definition">Back</label>
-                                <textarea id="definition" className={styles.backInput}
-                                    placeholder="Answer or definition" rows={5}
+                                <TextareaAutosize id="definition" className={styles.backInput}
+                                    placeholder="Answer or definition" minRows={5}
                                     value={card.definition}
                                     onChange={(e) => handleFlashcardChange(index, "definition", e.target.value)}
                                 />
