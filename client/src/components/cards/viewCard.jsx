@@ -1,6 +1,7 @@
 import styles from "./viewCard.module.css";
 import { SquarePen, CheckIcon } from 'lucide-react';
 import { useState } from 'react';
+import { useAuth } from '../../contexts/authContext';
 import TextareaAutosize from "react-textarea-autosize"
 
 const ViewCard = ({ flashcard, index, setError, setId, onUpdate }) => {
@@ -12,6 +13,7 @@ const ViewCard = ({ flashcard, index, setError, setId, onUpdate }) => {
 
     const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
     const token = localStorage.getItem("token");
+    const { user } = useAuth();
     
     const handleEdit = async () => {
         const res = await fetch(`${BACKEND_URL}/flashcards/${setId}/${flashcard.flashcard_id}`,
@@ -35,10 +37,11 @@ const ViewCard = ({ flashcard, index, setError, setId, onUpdate }) => {
             <div className={styles.cardContent}>
                 <div className={styles.cardHeader}>
                     <h3 className={styles.cardTitle}>Card {index + 1}</h3>
-                    {editMode ? <button className={styles.doneButton}
-                        onClick={handleEdit}><CheckIcon /></button>
-                    : <button className={styles.editButton}
-                        onClick={() => setEditMode(true)}><SquarePen /></button>}
+                    {flashcardSet.username === user.username &&
+                        (editMode ? <button className={styles.doneButton}
+                            onClick={handleEdit}><CheckIcon /></button>
+                        : <button className={styles.editButton}
+                            onClick={() => setEditMode(true)}><SquarePen /></button>)}
                 </div>
                 <div className={styles.cardInfo}>
                     <div className={styles.cardFront}>
