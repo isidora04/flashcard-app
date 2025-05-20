@@ -166,7 +166,8 @@ const ViewSet = () => {
                 <div className={styles.cardTable}>
                     {flashcards.map((card, index) => (
                         <ViewCard key={card.flashcard_id} flashcard={card} setId={setId}
-                            index={index} setError={setError} onUpdate={updateFlashcard} />
+                            index={index} setError={setError} onUpdate={updateFlashcard}
+                            flashcardSet={flashcardSet} />
                     ))}
                 </div>
             </div>

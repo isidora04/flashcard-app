@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useAuth } from '../../contexts/authContext';
 import TextareaAutosize from "react-textarea-autosize"
 
-const ViewCard = ({ flashcard, index, setError, setId, onUpdate }) => {
+const ViewCard = ({ flashcard, index, setError, setId, onUpdate, flashcardSet }) => {
 
     const [ front, setFront ] = useState(flashcard.term);
     const [ back, setBack ] = useState(flashcard.definition);
