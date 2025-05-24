@@ -1,4 +1,4 @@
-# Flashcard App
+# Flashcard Maker
 
 [![Deploy Frontend](https://img.shields.io/badge/deploy-frontend-blue)](https://flashcard-app-lime-seven.vercel.app/)
 
