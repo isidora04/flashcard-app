@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Trash2, Globe, Lock } from "lucide-react";
 import { useAuth } from "../../contexts/authContext";
 import styles from "./viewSet.module.css";
